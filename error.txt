@@ -1,0 +1,85 @@
+https://docs.anaconda.com/miniconda/miniconda-other-installer-links/
+
+1) ERROR: Could not find a version that satisfies the requirement triton==2.0.0 (from versions: none)
+ERROR: No matching distribution found for triton==2.0.0
+
+2) Using cached torch-2.0.1-cp39-cp39-win_amd64.whl (172.4 MB)
+Installing collected packages: torch
+  Attempting uninstall: torch
+    Found existing installation: torch 1.13.1
+    Uninstalling torch-1.13.1:
+      Successfully uninstalled torch-1.13.1
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+pytorch-tabnet 4.0 requires torch<2.0,>=1.2, but you have torch 2.0.1 which is incompatible.
+
+3) Obtaining scikit_learn from git+https://github.com/scikit-learn/scikit-learn.git@825e892e8c146f69df4a9113025404c9d83757a3#egg=scikit_learn
+  Skipping because already up-to-date.
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Preparing editable metadata (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Preparing editable metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [32 lines of output]
+      Partial import of sklearn during the build process.
+      Traceback (most recent call last):
+        File "C:\Users\Dell\miniconda3\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 353, in <module>
+          main()
+        File "C:\Users\Dell\miniconda3\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 335, in main          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "C:\Users\Dell\miniconda3\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 181, in prepare_metadata_for_build_editable
+          return hook(metadata_directory, config_settings)
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\build_meta.py", line 469, in prepare_metadata_for_build_editable
+          return self.prepare_metadata_for_build_wheel(
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\build_meta.py", line 373, in prepare_metadata_for_build_wheel
+          self.run_setup()
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\build_meta.py", line 503, in run_setup
+          super().run_setup(setup_script=setup_script)
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\build_meta.py", line 318, in run_setup
+          exec(code, locals())
+        File "<string>", line 627, in <module>
+        File "<string>", line 621, in setup_package
+        File "<string>", line 555, in configure_extension_modules
+        File "U:\INN\src\scikit-learn\sklearn\_build_utils\__init__.py", line 46, in cythonize_extensions
+          basic_check_build()
+        File "U:\INN\src\scikit-learn\sklearn\_build_utils\pre_build_helpers.py", line 73, in basic_check_build
+          compile_test_program(code)
+        File "U:\INN\src\scikit-learn\sklearn\_build_utils\pre_build_helpers.py", line 31, in compile_test_program
+          ccompiler.compile(
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\_distutils\_msvccompiler.py", line 379, in compile
+          self.initialize()
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\_distutils\_msvccompiler.py", line 289, in initialize
+          vc_env = _get_vc_env(plat_spec)
+        File "C:\Users\Dell\AppData\Local\Temp\pip-build-env-upfe51f4\overlay\Lib\site-packages\setuptools\_distutils\_msvccompiler.py", line 150, in _get_vc_env
+          raise DistutilsPlatformError(
+      distutils.errors.DistutilsPlatformError: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+4) Using cached torch-1.13.1-cp39-cp39-win_amd64.whl (162.5 MB)
+Installing collected packages: torch
+  Attempting uninstall: torch
+    Found existing installation: torch 2.0.1
+    Uninstalling torch-2.0.1:
+      Successfully uninstalled torch-2.0.1
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchaudio 2.0.2 requires torch==2.0.1, but you have torch 1.13.1 which is incompatible.
+torchvision 0.15.2 requires torch==2.0.1, but you have torch 1.13.1 which is incompatible.
+
+5) ERROR: Could not find a version that satisfies the requirement nvidia-nccl-cu11==2.14.3 (from versions: 0.0.1.dev5)
+ERROR: No matching distribution found for nvidia-nccl-cu11==2.14.3
+=> pip install nvidia-nccl-cu11==2.14.3
+
+6) ERROR: Ignored the following yanked versions: 8.9.4.19
+ERROR: Could not find a version that satisfies the requirement nvidia-cudnn-cu11==8.5.0.96 (from versions: 0.0.1.dev5, 8.9.4.25, 8.9.5.29, 9.0.0.312, 9.1.0.70, 9.1.1.17, 9.2.0.82, 9.2.1.18, 9.3.0.75, 9.4.0.58)
+ERROR: No matching distribution found for nvidia-cudnn-cu11==8.5.0.96
+=> pip install  nvidia-cudnn-cu11==8.9.4.25
